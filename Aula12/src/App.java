@@ -1,6 +1,4 @@
-import telefone.Contato;
-import telefone.Contatos;
-import telefone.Telefone;
+import telefone.*;
 
 public class App {
     public static void main(String[] args) {
@@ -22,6 +20,32 @@ public class App {
 
         System.out.println("Contatos filtrados: ");
         System.out.println(telefoneContatos.buscar("l"));
+
+/*        Ligacao ligacao = new Ligacao("40028922", "12345678");
+//        ligacao.ligar();
+//        System.out.println(ligacao);
+*/
+
+        // telefone.ligar("789468");
+        // telefone.ligar(contatoA.getNumero());
+        telefone.ligar(contatoA);
+        telefone.ligar(contatoB);
+        telefone.ligar(contatoC);
+        telefone.ligar(contatoC);
+        telefone.ligar(contatoD);
+
+        System.out.println(telefone.getChamadas());
+
+        Email emailA = new Email("lucas@gmail.com", "luan@gmail.com", "Olá, Lucas. Prazer em te conhecer.");
+        Email emailB = new Email("maria@gmail.com", "lorraine@gmail.com", "Olá, Maria. Eu sou a Lorraine.");
+        Email emailC = new Email("ana@gmail.com", "julia@gmail.com", "Olá, Julia. Quer ser minha amiga?");
+
+        Emails emails = new Emails();
+        emails.adicionar(emailA);
+        emails.adicionar(emailB);
+        emails.adicionar(emailC);
+
+        System.out.println(emails);
 
     }
 }
